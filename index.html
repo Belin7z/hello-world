@@ -7,4 +7,13 @@
 <body>
   <h1>Hello World!</h1>
 </body>
+    <p id="hora"></p>
+  <script>
+    function atualizarHora() {
+      const agora = new Date();
+      document.getElementById('hora').textContent = agora.toLocaleTimeString('pt-BR');
+    }
+    atualizarHora();
+    setInterval(atualizarHora, 1000);
+  </script>
 </html>
